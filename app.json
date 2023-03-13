@@ -1,7 +1,99 @@
-STRING_SESSION = 2zhaqm9T4mhpBuKxqYqvVqstlg_Ya9-W-zkVnxJATEGfjicRjPYYsax7o7CevMeHHzDS4pgStS8IACW_dqUYGcRcvU9U1DtO7zru35vGH5zI2i1frwfxoJ0mtXic08rjp0Q3dwOI5wJkPbAaD0sF2JezOiRWwZrqDpgAxjZaCxHVSfl2E8Bodeze12c-nfGXNXwPpIJDkoGtxKbXRxnmf-n-lq93qKANjAPEU-8bFNMTdtEtDDbZCCi5afJNSxTRs1P0mZ5mvwgwyj5vQGenpOLOJ2D-aWM-b1VBg6nz3Dbq90mUAyPvkSG6TeeDk7DQbD8eUYI9kJFFjFy68IDkAAAAAT0GcoYA
-API_ID = 21517170
-API_HASH = 8dc75ded70150fecac4e670ee73bf5c0
-BOT_TOKEN = 5602333093:AAH4_fAZbTlbko1hiitdm1qAEkR1PPmJR7QMONGO_DB_URI = mongodb+srv://Iamdevilxop:Royal9011@cluster0.znqbh.mongodb.net/?retryWrites=true&w=majority
-LOG_GROUP_ID = -1001914105540
-MUSIC_BOT_NAME = chinki ro bot
-OWNER_ID = 5472267746
+ {
+    "name": "Yukki Music Bot",
+    "description": "Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls. Supporting platforms like Youtube, Spotify, Resso, AppleMusic, Soundcloud and M3u8 Links.",
+    "logo": "https://telegra.ph/file/c0e014ff34f34d1056627.png",
+    "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "Yukki",
+    "YukkiMusicBot",
+    "telegram-bot",
+    "pyrogram"
+    ],
+    "stack": "container",
+    "env": {
+      "API_ID": { 21517170 }
+        "description": "Get this value from https://my.telegram.org",
+        "value": "",
+        "required": true
+      },
+      "API_HASH": { 8dc75ded70150fecac4e670ee73bf5c0}
+        "description": "Get this value from https://my.telegram.org",
+        "value": "",
+        "required": true
+      },
+      "AUTO_LEAVING_ASSISTANT": { true }
+        "description": "If you want your assistant to leave all chats automatically after some time.",
+        "value": "True",
+        "required": false
+      },
+      "BOT_TOKEN": { 5602333093:AAH4_fAZbTlbko1hiitdm1qAEkR1PPmJR7Q }
+        "description": "A Bot's token from Botfather",
+        "value": "",
+        "required": true
+      },
+      "MONGO_DB_URI": { mongodb+srv://Iamdevilxop:Royal9011@cluster0.znqbh.mongodb.net/?retryWrites=true&w=majority }
+        "description": "Get a mongodb url from https://cloud.mongodb.com . You can leave it blank if you want , bot will use Yukki's database for you.",
+        "value": "",
+        "required": true
+      },
+      "MUSIC_BOT_NAME": { chinkimusicbot }
+        "description": "A name for your Music Bot. Please don't use ascii characters",
+        "value": "",
+        "required": true
+      },
+      "OWNER_ID": { 5472267746 }
+        "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
+        "value": "",
+        "required": true
+      },
+      "STRING_SESSION": { 2zhaqm9T4mhpBuKxqYqvVqstlg_Ya9-W-zkVnxJATEGfjicRjPYYsax7o7CevMeHHzDS4pgStS8IACW_dqUYGcRcvU9U1DtO7zru35vGH5zI2i1frwfxoJ0mtXic08rjp0Q3dwOI5wJkPbAaD0sF2JezOiRWwZrqDpgAxjZaCxHVSfl2E8Bodeze12c-nfGXNXwPpIJDkoGtxKbXRxnmf-n-lq93qKANjAPEU-8bFNMTdtEtDDbZCCi5afJNSxTRs1P0mZ5mvwgwyj5vQGenpOLOJ2D-aWM-b1VBg6nz3Dbq90mUAyPvkSG6TeeDk7DQbD8eUYI9kJFFjFy68IDkAAAAAT0GcoYA }
+        "description": "A Pyrogram String Session. One Assistant is Compulsory.",
+        "value": "",
+        "required": true
+      },
+      "HEROKU_API_KEY": {
+        "description": "Your Heroku account's API key",
+        "value": "",
+        "required": false
+      },
+      "HEROKU_APP_NAME": {
+        "description": "Your heroku app/bot's name",
+        "value": "",
+        "required": false
+      },
+      "LOG_GROUP_ID": { -1001914105540 }
+        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!. Use only Group. Please don't use Channel ID.",
+        "value": "",
+        "required": true
+      },
+      "UPSTREAM_REPO": { https://github.com/jaatmotolove/iloveyoumusicbot }
+        "description": "If you dont know this, Leave as it is",
+        "value": "https://github.com/TeamYukki/YukkiMusicBot",
+        "required": true
+      },
+      "UPSTREAM_BRANCH": { master}
+        "description": "Upstream Repo's Branch Name",
+        "value": "master",
+        "required": true
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "formation": {
+          "worker": {
+              "quantity": 1,
+              "size": "free"
+          }
+      }
+  }
